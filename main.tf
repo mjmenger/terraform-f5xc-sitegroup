@@ -35,4 +35,7 @@ resource "volterra_site_mesh_group" "site-group" {
   }
 }
 
+output virtual_site_name {
+  value = volterra_virtual_site.virtual_site.name
+}
 
