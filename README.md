@@ -32,5 +32,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_virtual_site_name"></a> [virtual\_site\_name](#output\_virtual\_site\_name) | n/a |
 <!-- END_TF_DOCS -->
