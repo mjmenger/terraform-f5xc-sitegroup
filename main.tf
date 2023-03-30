@@ -9,6 +9,10 @@ terraform {
     aws = ">= 2.24"
   }
 }
+locals{
+  site_selector_key = "site-group"
+  site_selector_value = var.project_prefix
+}
 variable "project_prefix" {
   type        = string
   description = "projectPrefix name for tagging"
@@ -18,10 +22,17 @@ resource "volterra_virtual_site" "virtual_site" {
   namespace = "shared"
 
   site_selector {
-    expressions = [format("site-group in (%s)", var.project_prefix)]
+    expressions = [format("%s in (%s)", local.site_selector_key, local.site_selector_value)]
   }
 
   site_type = "CUSTOMER_EDGE"
+}
+
+output site_selector_key {
+  value = local.site_selector_key
+}
+output site_selector_value {
+  value = local.site_selector_value
 }
 
 resource "volterra_site_mesh_group" "site-group" {
