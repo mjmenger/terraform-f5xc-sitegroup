@@ -28,11 +28,13 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_projectPrefix"></a> [projectPrefix](#input\_projectPrefix) | projectPrefix name for tagging | `string` | n/a | yes |
+| <a name="input_project_prefix"></a> [project\_prefix](#input\_project\_prefix) | projectPrefix name for tagging | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
+| <a name="output_site_selector_key"></a> [site\_selector\_key](#output\_site\_selector\_key) | n/a |
+| <a name="output_site_selector_value"></a> [site\_selector\_value](#output\_site\_selector\_value) | n/a |
 | <a name="output_virtual_site_name"></a> [virtual\_site\_name](#output\_virtual\_site\_name) | n/a |
 <!-- END_TF_DOCS -->
